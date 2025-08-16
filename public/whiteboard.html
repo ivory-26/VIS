@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Interactive Whiteboard</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+        if (!localStorage.getItem("username")) {
+          window.location.href = "index.html";
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/script.js" defer></script>
+</head>
+<body class="light">
+
+<canvas id="canvas"></canvas>
+
+<div class="toolbar-container">
+    <div id="toolbar-toggle-handle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+    </div>
+
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <div class="group-label">Shapes</div>
+            <div class="group-buttons">
+                <button id="rectangle" class="tool-btn" title="Rectangle"><img src="icon/square.svg" alt="Rectangle" /></button>
+                <button id="circle" class="tool-btn" title="Circle"><img src="icon/circle.svg" alt="Circle" /></button>
+                <button id="line" class="tool-btn" title="Line"><img src="icon/line.svg" alt="Line" /></button>
+                <button id="triangle" class="tool-btn" title="Triangle"><img src="icon/triangle.svg" alt="Triangle" /></button>
+                <button id="arrow" class="tool-btn" title="Arrow"><img src="icon/arrow.svg" alt="Arrow" /></button>
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Tools</div>
+            <div class="group-buttons">
+                <button id="pen" class="tool-btn active" title="Pen"><img src="icon/pen.svg" alt="Pen" /></button>
+                <button id="eraser" class="tool-btn" title="Eraser"><img src="icon/eraser.svg" alt="Eraser" /></button>
+                <button id="text" class="tool-btn" title="Text"><img src="icon/text.svg" alt="Text" /></button>
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Font</div>
+            <div class="group-buttons font-controls">
+                <select id="font-family-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <input type="number" id="font-size-input" value="16" min="8" max="128" title="Font Size" />
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Brush</div>
+            <div class="group-buttons">
+                <input type="color" id="colorPicker" title="Color Picker" value="#000000" />
+                <input type="range" id="size-slider" min="1" max="100" value="5" title="Brush Size" />
+                <input type="range" id="eraserSize" min="5" max="100" value="20" title="Eraser Size" />
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Board</div>
+            <div class="group-buttons">
+                <button id="uploadImageBtn" class="tool-btn" title="Upload Image"><img src="icon/upload.svg" alt="Upload" /></button>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;" />
+                <button id="save" class="tool-btn" title="Save PNG"><img src="icon/save.svg" alt="Save" /></button>
+                <button id="clear" class="tool-btn" title="Clear Board"><img src="icon/clear.svg" alt="Clear" /></button>
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Zoom</div>
+            <div class="group-buttons">
+                <button id="zoomIn" class="tool-btn" title="Zoom In"><img src="icon/zoom-in.svg" alt="Zoom In" /></button>
+                <button id="zoomOut" class="tool-btn" title="Zoom Out"><img src="icon/zoom-out.svg" alt="Zoom Out" /></button>
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">Theme</div>
+            <div class="group-buttons">
+                <button id="lightTheme" class="tool-btn" title="Light"><img src="icon/light.svg" alt="Light" /></button>
+                <button id="darkTheme" class="tool-btn" title="Dark"><img src="icon/dark.svg" alt="Dark" /></button>
+                <button id="colorfulTheme" class="tool-btn" title="Colorful"><img src="icon/colorful.svg" alt="Colorful" /></button>
+            </div>
+        </div>
+
+        <div class="toolbar-group">
+            <div class="group-label">User</div>
+            <div class="group-buttons user-info">
+                <span>Hi, <script>document.write(localStorage.getItem("username"))</script>!</span>
+                <button onclick="logout()" class="logout" title="Logout"><img src="icon/logout.svg" alt="Logout" /></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-right">
+    <div class="session-info">
+        <h4>Share Session</h4>
+        <div style="font-size: 12px; word-wrap: break-word; margin-bottom: 5px;">
+            <span id="sessionLink" style="font-weight: bold;"></span>
+        </div>
+        <button onclick="copyLink()" style="width: 100%; padding: 5px; font-size: 12px;">Copy Link</button>
+        <h4 style="margin-top: 15px;">Session ID</h4>
+        <p id="sessionIdDisplay">Loading...</p>
+    </div>
+
+    <div id="userListBox">
+        <h4>🟢 Online Users</h4>
+        <ul id="userList"></ul>
+    </div>
+
+    <div id="chatBox">
+        <h4>💬 Chat</h4>
+        <div id="chatMessages"></div>
+        <form id="chatForm">
+            <input id="chatInput" type="text" placeholder="Message..." autocomplete="off" />
+            <button type="submit">➤</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
