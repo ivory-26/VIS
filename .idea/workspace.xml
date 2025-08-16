@@ -5,18 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e0e536c-cffb-423e-b869-b4301d0cc01f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/clear.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/colorful.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/eraser.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/logout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/redo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/save.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/text.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/triangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/undo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/upload.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/zoom-in.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon/zoom-out.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhiteboardWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteboardWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-optional.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-optional.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-test.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build-test.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-gyp-build.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/webidl-conversions/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/webidl-conversions/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/whatwg-url/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/whatwg-url/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sift/es5m/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sift/es5m/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sift/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sift/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sift/sift.csp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sift/sift.csp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
@@ -31,18 +42,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;frag2win&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/frag2win/WhiteboardWeb&quot;,
+    &quot;accountId&quot;: &quot;e6d21f37-838c-4800-9488-c22c82a1d6e9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="30PGWujIis8qGRvHds7x1wvynn4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging main"
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/sunanda/IdeaProjects/WhiteboardWeb",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sunanda\IdeaProjects\WhiteboardWeb" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sunanda\IdeaProjects\WhiteboardWeb" />
       <recent name="C:\Users\sunanda\IdeaProjects\WhiteboardWeb\.idea" />
     </key>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e0e536c-cffb-423e-b869-b4301d0cc01f" name="Changes" comment="" />
+      <created>1753521831570</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753521831570</updated>
+    </task>
     <servers />
   </component>
 </project>
